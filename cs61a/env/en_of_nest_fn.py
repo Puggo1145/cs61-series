@@ -35,6 +35,6 @@ print(adder(1)) # 2
 
 # Sum Up: When a function is called
 # 1. add a local frame, and bind the name of the called function to this frame
-# 2. cppy parent of the functino frame to this local frame
+# 2. copy parent of the function frame to this local frame
 # 3. bind formal parameters（形参）to the arguments in the local frame
 # 4. execute the body of the function in the environment that starts with the local frame

@@ -5,7 +5,17 @@ def f(g):
 
 f(lambda y: a + y)(a)
 
-# Global Frame
+# Global
     # a: 1
-    # f
-
+    # f: f(g)
+# f1 <f>(g) [parent=Global]
+    # g: <lambda1 y: a + y> [parent=Global]
+    # local.a: 2
+    # return value: <lambda2 y: 2 + g(y)> [parent=f1]
+# f2 <lambda2>(y) [parent=f1]
+    # y: 1
+    # g(y): f3 <lambda1>(y) [parent=Global]
+        # y: 1
+        # Global.a = 1
+        # return value: 2
+    # return value: 4
